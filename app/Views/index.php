@@ -51,9 +51,10 @@
                 <p>
                     Sekolah Terbesar di Kota Depok dengan Segudang Prestasi
                 </p>
-                <a class="btn btn-primary btn-lg" href="#kejuruan" role="button">
-                    Lanjutkan
-                </a>
+            </div>
+            <div class="home-btn">
+                <button class="button-59 mr-10" role="button">MASUK</button>
+                <button class="button-59 mr-10" role="button">DAFTAR</button>
             </div>
             <div class="stats-container">
                 <div class="stat-item">
@@ -77,7 +78,7 @@
     </section>
 
     <section id="kejuruan" class="p-4">
-        <h2 class="text-center fs-2 jurusan-text">Jurusan</h2><br><br>
+        <h2 class="text-center fs-2 jurusan-text">List Jurusan</h2><br><br>
         <div class="jurusan-slider">
             <button class="prev" onclick="moveSlider(-1)">&#10094;</button>
             <div class="jurusan-wrapper" id="sliderContainer">
@@ -105,7 +106,37 @@
             <button class="next" onclick="moveSlider(1)">&#10095;</button>
         </div>
     </section>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15860.419338529648!2d106.8096617!3d-6.3804675!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eeacc6e549ab%3A0xd6c5c8ece644d8ee!2sSekolah%20Menengah%20Kejuruan%20Citra%20Negara!5e0!3m2!1sid!2sid!4v1728786042559!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <section id="sertifikat">
+        <h2 class="text-center fs-2 sertifikat-text">Sertifikat</h2><br><br>
+        <div class="sertifikat-container">
+            <div class="sertifikat-wrapper">
+                <div class="certificate">
+                    <img src="<?= base_url('img/sertifikat/certif1.png'); ?>" alt="Akreditasi Sertifikat" onclick="showCertificate('<?= base_url('img/sertifikat/certif1.png'); ?>')">
+                    <div class="sertifikat-caption">Akreditasi Sertifikat</div>
+                </div>
+                <div class="certificate">
+                    <img src="<?= base_url('img/sertifikat/certif2.png'); ?>" alt="Sekolah Adiwiyata" onclick="showCertificate('<?= base_url('img/sertifikat/certif2.png'); ?>')">
+                    <div class="sertifikat-caption">Sekolah Masagi</div>
+                </div>
+                <div class="certificate">
+                    <img src="<?= base_url('img/sertifikat/certif3.png'); ?>" alt="Lomba Gala Kreasi" onclick="showCertificate('<?= base_url('img/sertifikat/certif3.png'); ?>')">
+                    <div class="sertifikat-caption">Lomba Gala Kreasi</div>
+                </div>
+                <div class="certificate">
+                    <img src="<?= base_url('img/sertifikat/certif4.png'); ?>" alt="Sekolah Masagi" onclick="showCertificate('<?= base_url('img/sertifikat/certif4.png'); ?>')">
+                    <div class="sertifikat-caption">Sekolah Adiwiyata</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="overlay" onclick="closeOverlay()">
+        <img id="full-img" src="" alt="Full Certificate">
+        <button id="close-btn" onclick="closeOverlay()">X</button>
+    </div>
+
+    <iframe class="pt-5" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15860.419338529648!2d106.8096617!3d-6.3804675!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eeacc6e549ab%3A0xd6c5c8ece644d8ee!2sSekolah%20Menengah%20Kejuruan%20Citra%20Negara!5e0!3m2!1sid!2sid!4v1728786042559!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </body>
 <script src="<?= base_url('js/script.js') ?>"></script>
 <script src="<?= base_url('boostrap/js/boostrap.min.js') ?>"></script>

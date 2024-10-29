@@ -17,12 +17,11 @@ window.onscroll = function() {
 window.addEventListener('scroll', function() {
     var navbar = document.querySelector('.navbar-container');
     if (window.scrollY > 100) { 
-        // Saat halaman digulir lebih dari 100px, ubah menjadi navbar-colored
-        navbar.classList.add('navbar-colored');
+        navbar.classList.add('navbar-transparent'); // navbar transparant pas di scroll
+        navbar.classList.add('text-dark'); // navbar transparant pas di scroll
         navbar.classList.remove('navbar-colored');
     } else {
-        // Jika halaman kembali ke atas (kurang dari 100px), ubah kembali menjadi navbar-transparent
-        navbar.classList.add('navbar-colored');
+        navbar.classList.add('navbar-colored'); // navbar warna pas diem atau balik ke atas
         navbar.classList.remove('navbar-transparent');
     }
 });
@@ -44,4 +43,15 @@ function moveSlider(step) {
 
     const slideWidth = slides[0].clientWidth;
     sliderContainer.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+}
+
+function showCertificate(src) {
+    const overlay = document.getElementById('overlay');
+    const fullImg = document.getElementById('full-img');
+    overlay.style.display = 'flex';
+    fullImg.src = src;
+}
+
+function closeOverlay() {
+    document.getElementById('overlay').style.display = 'none';
 }
