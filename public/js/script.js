@@ -46,12 +46,12 @@ function moveSlider(step) {
 }
 
 function showCertificate(src) {
-    const overlay = document.getElementById('overlay');
+    const overlay = document.getElementById('overlay-sertifikat');
     const fullImg = document.getElementById('full-img');
     overlay.style.display = 'flex';
     fullImg.src = src;
 }
 
 function closeOverlay() {
-    document.getElementById('overlay').style.display = 'none';
+    document.getElementById('overlay-sertifikat').style.display = 'none';
 }

@@ -131,7 +131,42 @@
         </div>
     </section>
 
-    <div id="overlay" onclick="closeOverlay()">
+    <section id="prestasi">
+        <h2 class="text-center fs-2 sertifikat-text">Sertifikat</h2><br><br>
+        <div class="prestasi-container">
+            <ul class="results">
+                <li class="result">
+                    <a href="#"><img src="<?= base_url('img/prestasi/band.png'); ?>" alt=""></a>
+                </li>
+                <li class="result">
+                    <a href="#"><img src="<?= base_url('img/prestasi/dance.png'); ?>" alt=""></a>
+                </li>
+                <li class=" result">
+                    <a href="#"><img src="<?= base_url('img/prestasi/danton.png'); ?>"></a>
+                </li>
+                <li class="result">
+                    <a href="#"><img src="<?= base_url('img/prestasi/freefire.png'); ?>"></a>
+                </li>
+                <li class="result">
+                    <a href="#"><img src="<?= base_url('img/prestasi/futsal.png'); ?>"></a>
+                </li>
+                <li class="result">
+                    <a href="#"><img src="<?= base_url('img/prestasi/gitar.png'); ?>"></a>
+                </li>
+                <li class="result">
+                    <a href="#"><img src="<?= base_url('img/prestasi/paskibra.png'); ?>"></a>
+                </li>
+                <li class="result">
+                    <a href="#"><img src="<?= base_url('img/prestasi/puisi.png'); ?>"></a>
+                </li>
+                <li class="result">
+                    <a href="#"><img src="<?= base_url('img/prestasi/taekwondo.png'); ?>"></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <div id="overlay-sertifikat" onclick="closeOverlay()">
         <img id="full-img" src="" alt="Full Certificate">
         <button id="close-btn" onclick="closeOverlay()">X</button>
     </div>
