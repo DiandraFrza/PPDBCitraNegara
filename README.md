@@ -1,1 +1,1 @@
-https://diandrafrza.github.io/PPDBCitraNegara/demo/home.png
+https://github.com/DiandraFrza/PPDBCitraNegara/blob/main/demo/home.PNG
