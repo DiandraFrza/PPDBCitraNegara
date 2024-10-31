@@ -17,11 +17,12 @@ window.onscroll = function() {
 window.addEventListener('scroll', function() {
     var navbar = document.querySelector('.navbar-container');
     if (window.scrollY > 100) { 
-        navbar.classList.add('navbar-transparent'); // navbar transparant pas di scroll
-        navbar.classList.add('text-dark'); // navbar transparant pas di scroll
+        // pas di scroll jadi transparant text hitam bold
+        navbar.classList.add('navbar-transparent');
         navbar.classList.remove('navbar-colored');
     } else {
-        navbar.classList.add('navbar-colored'); // navbar warna pas diem atau balik ke atas
+        // pas ke posisi semula jadi warna hijau text putih
+        navbar.classList.add('navbar-colored');
         navbar.classList.remove('navbar-transparent');
     }
 });
@@ -46,12 +47,34 @@ function moveSlider(step) {
 }
 
 function showCertificate(src) {
-    const overlay = document.getElementById('overlay-sertifikat');
-    const fullImg = document.getElementById('full-img');
-    overlay.style.display = 'flex';
+    const overlay = document.getElementById("overlay-sertifikat");
+    const fullImg = document.getElementById("full-img");
+    overlay.style.display = "flex"; // Gunakan "flex" agar tampilan overlay menjadi tengah
     fullImg.src = src;
 }
 
 function closeOverlay() {
-    document.getElementById('overlay-sertifikat').style.display = 'none';
+    const overlay = document.getElementById("overlay-sertifikat");
+    overlay.style.display = "none";
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const cards = document.querySelectorAll(".card-prestasi");
+
+    cards.forEach(card => {
+        card.addEventListener("click", function() {
+            // Jika sudah aktif, hilangkan class gallery-active
+            if (card.classList.contains("gallery-active")) {
+                card.classList.remove("gallery-active");
+            } else {
+                // Hapus class gallery-active dari elemen lain
+                cards.forEach(c => c.classList.remove("gallery-active"));
+                // Tambahkan class gallery-active ke elemen yang diklik
+                card.classList.add("gallery-active");
+            }
+        });
+    });
+});
+
+

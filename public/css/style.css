@@ -1,10 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-body,
+*, body,
 html {
     margin: 0;
     padding: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto","Poppins", sans-serif;
+}
+
+.bg-yellow {
+    background-color: #c5c50b;
 }
 
 /* Bagian Navbar */
@@ -46,10 +50,15 @@ html {
 }
 
 .navbar-transparent a {
-    color: black !important; /* Ubah warna teks menjadi hitam */
+    color: black !important;
     backdrop-filter: blur(2.3px);
     font-weight: bold;
-    transition: color 0.5s ease; /* Smooth transition */
+    transition: color 0.5s ease;
+     /* Smooth transition:; */
+    -webkit-transition: color 0.5s ease;
+    -moz-transition: color 0.5s ease;
+    -ms-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
 }
 
 /* Navbar transparan */
@@ -186,6 +195,12 @@ html {
     fill: #000;
 }
 
+.btn-outline-dark:hover {
+    background-color: #4caf4f !important;
+    border-color: #000;
+    color: #000 !important;
+    fill: #000;
+}
 .button-59:active {
     border-color: #000;
     color: #000;
@@ -352,10 +367,10 @@ button:hover {
 #sertifikat {
     padding-bottom: 10px;
     padding-top: 40px;
-    background: rgb(124, 255, 128);
+    background: #4caf50;
     background: linear-gradient(
         0deg,
-        rgba(124, 255, 128, 1) 0%,
+        #4caf50 0%,
         rgba(243, 238, 238, 1) 65%
     );
 }
@@ -401,13 +416,13 @@ button:hover {
 .sertifikat-caption {
     margin-top: 5px;
     font-weight: bold;
-    color: #333;
+    color: #ffffff;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-    background-color: #f0f0f0;
+    background-color: #000066;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -443,7 +458,7 @@ button:hover {
     right: 49%;
     font-size: 30px;
     z-index: 1000;
-    border-radius: 50%; /* Membuat lingkaran */
+    border-radius: 50%;
     width: 50px;
     height: 50px;
     display: flex;
@@ -461,87 +476,94 @@ button:hover {
 }
 /* ----------------- */
 
-/* Prestasi */
-.prestasi-container {
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
+/* Bagian Prestasi */
+.prestasi-text {
+    text-align: center !important;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    border-bottom: 3px solid #4caf50;
+    padding-bottom: 5px;
+    width: fit-content;
+    margin: 0 auto;
 }
 
-ul {
-    display: flex;
-    width: calc(80% - 2rem);
-    padding: 0;
+#prestasi {
     margin: 0;
-    list-style-type: none;
-}
-
-li {
     padding: 0;
+    box-sizing: border-box;
 }
 
-img {
-    max-width: 100%;
-    width: 100%;
+.prestasi-wrapper {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 70rem;
     object-fit: cover;
-    transition: all 0.2s ease;
 }
 
-ul:is(:hover, :focus-within) img {
-    opacity: calc(0.1 + (var(--active-lerp, 0) * 0.9));
-    filter: grayscale(calc(1 - var(--active-lerp, 0)));
+.card-prestasi{
+    position: relative;
+    left: 0;
+    width: 3rem;
+    border-radius: 5rem;
+    height: 25rem;
+    overflow: hidden;
+    transition: .4s ease-in-out;
+    box-shadow: 0 5 12px rgba(0, 0, 0, .3);
+    flex: .15;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
+    object-fit: cover;
 }
 
-:root {
-    --lerp-0: 1;
-    --lerp-1: 0.5787037;
-    --lerp-2: 0.2962963;
-    --lerp-3: 0.125;
-    --lerp-4: 0.037037;
-    --lerp-5: 0.0046296;
-    --lerp-6: 0;
+.card-prestasi img{
+    position: relative;
+    height: 25rem;
+    object-fit: cover;
+    transition: object-fit 0.4s ease-in-out, transform 0.4s ease-in-out;
+    -webkit-transition: object-fit 0.4s ease-in-out, transform 0.4s ease-in-out;
+    -moz-transition: object-fit 0.4s ease-in-out, transform 0.4s ease-in-out;
+    -ms-transition: object-fit 0.4s ease-in-out, transform 0.4s ease-in-out;
+    -o-transition: object-fit 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
-a {
-    outline-offset: 4px;
+.card-prestasi:hover{
+    flex: 1 1 0;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 1rem;
+    transform: scale(1.1);
 }
 
-li {
-    flex: calc(0.1 + (var(--active-lerp, 0) * 1));
-    transition: flex 0.2s ease;
+.card-img-top {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
 }
 
-li:is(:hover, :focus-within) {
-    --active-lerp: var(--lerp-0);
-    z-index: 7;
+.card-img-top:hover{
+    transform: scale(1.1);
 }
-li:has(+ li:is(:hover, :focus-within)),
-li:is(:hover, :focus-within) + li {
-    --active-lerp: var(--lerp-1);
-    z-index: 6;
+
+.card-prestasi.gallery-active {
+    flex: 1;
+    transform: scale(1.1);
+    border-radius: 1rem;
 }
-li:has(+ li + li:is(:hover, :focus-within)),
-li:is(:hover, :focus-within) + li + li {
-    --active-lerp: var(--lerp-2);
-    z-index: 5;
+/* ----------------- */
+
+/* Bagian FOOTER */
+.footer-wrapper {
+    background-color: #45a049;
 }
-li:has(+ li + li + li:is(:hover, :focus-within)),
-li:is(:hover, :focus-within) + li + li + li {
-    --active-lerp: var(--lerp-3);
-    z-index: 4;
-}
-li:has(+ li + li + li + li:is(:hover, :focus-within)),
-li:is(:hover, :focus-within) + li + li + li + li {
-    --active-lerp: var(--lerp-4);
-    z-index: 3;
-}
-li:has(+ li + li + li + li + li:is(:hover, :focus-within)),
-li:is(:hover, :focus-within) + li + li + li + li + li {
-    --active-lerp: var(--lerp-5);
-    z-index: 2;
-}
-li:has(+ li + li + li + li + li + li:is(:hover, :focus-within)),
-li:is(:hover, :focus-within) + li + li + li + li + li + li {
-    --active-lerp: var(--lerp-6);
-    z-index: 1;
-}
+
+
