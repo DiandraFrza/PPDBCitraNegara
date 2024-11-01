@@ -1,10 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-*, body,
+font-robo {
+    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+}
+
+.font-poppins {
+    font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+}
+
+.font-opensans {
+    font-family: "Open Sans", "Arial", "Helvetica Neue", sans-serif;
+}
+
+*,
+body,
 html {
     margin: 0;
     padding: 0;
-    font-family: "Roboto","Poppins", sans-serif;
+    font-family: "Roboto", "Poppins", sans-serif;
 }
 
 .bg-yellow {
@@ -54,7 +67,7 @@ html {
     backdrop-filter: blur(2.3px);
     font-weight: bold;
     transition: color 0.5s ease;
-     /* Smooth transition:; */
+    /* Smooth transition:; */
     -webkit-transition: color 0.5s ease;
     -moz-transition: color 0.5s ease;
     -ms-transition: color 0.5s ease;
@@ -368,11 +381,7 @@ button:hover {
     padding-bottom: 10px;
     padding-top: 40px;
     background: #4caf50;
-    background: linear-gradient(
-        0deg,
-        #4caf50 0%,
-        rgba(243, 238, 238, 1) 65%
-    );
+    background: linear-gradient(0deg, #4caf50 0%, rgba(243, 238, 238, 1) 65%);
 }
 .sertifikat-container {
     text-align: center;
@@ -500,7 +509,7 @@ button:hover {
     align-items: center;
 }
 
-.gallery{
+.gallery {
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -508,16 +517,16 @@ button:hover {
     object-fit: cover;
 }
 
-.card-prestasi{
+.card-prestasi {
     position: relative;
     left: 0;
     width: 3rem;
     border-radius: 5rem;
     height: 25rem;
     overflow: hidden;
-    transition: .4s ease-in-out;
-    box-shadow: 0 5 12px rgba(0, 0, 0, .3);
-    flex: .15;
+    transition: 0.4s ease-in-out;
+    box-shadow: 0 5 12px rgba(0, 0, 0, 0.3);
+    flex: 0.15;
     -webkit-border-radius: 5rem;
     -moz-border-radius: 5rem;
     -ms-border-radius: 5rem;
@@ -525,7 +534,7 @@ button:hover {
     object-fit: cover;
 }
 
-.card-prestasi img{
+.card-prestasi img {
     position: relative;
     height: 25rem;
     object-fit: cover;
@@ -536,7 +545,7 @@ button:hover {
     -o-transition: object-fit 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
-.card-prestasi:hover{
+.card-prestasi:hover {
     flex: 1 1 0;
     object-fit: cover;
     cursor: pointer;
@@ -550,7 +559,7 @@ button:hover {
     object-fit: cover;
 }
 
-.card-img-top:hover{
+.card-img-top:hover {
     transform: scale(1.1);
 }
 
@@ -565,5 +574,3 @@ button:hover {
 .footer-wrapper {
     background-color: #45a049;
 }
-
-

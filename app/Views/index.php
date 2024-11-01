@@ -54,7 +54,7 @@
             </div>
             <div class="home-btn">
                 <button class="button-59 mr-10" role="button">MASUK</button>
-                <button class="button-59 mr-10" role="button">DAFTAR</button>
+                <button class="button-59 mr-10" role="button" onclick="location.href='<?= base_url('/ppdb_siswa/daftar') ?>'">DAFTAR</button>
             </div>
             <div class="stats-container">
                 <div class="stat-item">
