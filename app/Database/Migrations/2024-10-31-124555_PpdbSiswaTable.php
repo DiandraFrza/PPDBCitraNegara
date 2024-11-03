@@ -8,7 +8,6 @@ class PpdbSiswaTable extends Migration
 {
     public function up()
     {
-        // Struktur tabel
         $this->forge->addField([
             'id_siswa'       => [
                 'type'           => 'INT',
@@ -20,9 +19,9 @@ class PpdbSiswaTable extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => 100,
             ],
-            'tempat_lahir'   => [
-                'type'       => 'VARCHAR',
-                'constraint' => 50,
+            'jenis_kelamin'  => [
+                'type'       => 'ENUM',
+                'constraint' => ['Laki-Laki', 'Perempuan'],
             ],
             'tanggal_lahir'  => [
                 'type' => 'DATE',
@@ -71,16 +70,12 @@ class PpdbSiswaTable extends Migration
             ],
         ]);
 
-        // Primary Key
         $this->forge->addKey('id_siswa', true);
-
-        // Buat tabel
         $this->forge->createTable('ppdb_siswa');
     }
 
     public function down()
     {
-        // Drop tabel kalau di-rollback
-        $this->forge->dropTable('ppdb_siswa');
+        $this->forge->dropTable('ppdb_siswa', true);
     }
 }

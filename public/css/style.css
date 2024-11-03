@@ -17,11 +17,11 @@ body,
 html {
     margin: 0;
     padding: 0;
-    font-family: "Roboto", "Poppins", sans-serif;
+    font-family: "Poppins","Roboto",  sans-serif;
 }
 
 .bg-yellow {
-    background-color: #c5c50b;
+    background-color: #FFCC10;
 }
 
 /* Bagian Navbar */
@@ -121,6 +121,17 @@ html {
     justify-content: center; /* Teks rata horizontal */
     color: white;
 }
+
+.stat-item {
+    text-align: center;
+    margin: 20px;
+}
+
+.count {
+    font-size: 2em;
+    font-weight: bold;
+}
+
 
 .home-container::before {
     content: "";
@@ -500,6 +511,13 @@ button:hover {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f4e5;
+    /* background-image: url("../img/bg-prestasi.jpg"); */
+    background-size: cover; /* Biar gambar menutupi seluruh area */
+    background-position: center;
 }
 
 .prestasi-wrapper {
@@ -543,6 +561,10 @@ button:hover {
     -moz-transition: object-fit 0.4s ease-in-out, transform 0.4s ease-in-out;
     -ms-transition: object-fit 0.4s ease-in-out, transform 0.4s ease-in-out;
     -o-transition: object-fit 0.4s ease-in-out, transform 0.4s ease-in-out;
+    -webkit-border-radius: 5p;
+    -moz-border-radius: 5p;
+    -ms-border-radius: 5p;
+    -o-border-radius: 5p;
 }
 
 .card-prestasi:hover {
@@ -573,4 +595,34 @@ button:hover {
 /* Bagian FOOTER */
 .footer-wrapper {
     background-color: #45a049;
+}
+/* ----------------- */
+/* Notif */
+.notif-success {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 10000;
+}
+.notif-success.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+.notif-success .close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
 }

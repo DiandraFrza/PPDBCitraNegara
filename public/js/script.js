@@ -1,37 +1,37 @@
-window.onscroll = function() {
-    var heroText = document.querySelector('.hero-text');
-    var logos = document.querySelector('.logos-container');
-    var logoCn = document.querySelector('.logocn');
-    
+window.onscroll = function () {
+    var heroText = document.querySelector(".hero-text");
+    var logos = document.querySelector(".logos-container");
+    var logoCn = document.querySelector(".logocn");
+
     if (window.scrollY > 100) {
-        heroText.style.display = 'none';
-        logos.style.display = 'none';
-        logoCn.style.display = 'none';
+        heroText.style.display = "none";
+        logos.style.display = "none";
+        logoCn.style.display = "none";
     } else {
-        heroText.style.display = 'block';
-        logos.style.display = 'flex';
-        logoCn.style.display = 'block';
+        heroText.style.display = "block";
+        logos.style.display = "flex";
+        logoCn.style.display = "block";
     }
 };
 
-window.addEventListener('scroll', function() {
-    var navbar = document.querySelector('.navbar-container');
-    if (window.scrollY > 100) { 
+window.addEventListener("scroll", function () {
+    var navbar = document.querySelector(".navbar-container");
+    if (window.scrollY > 100) {
         // pas di scroll jadi transparant text hitam bold
-        navbar.classList.add('navbar-transparent');
-        navbar.classList.remove('navbar-colored');
+        navbar.classList.add("navbar-transparent");
+        navbar.classList.remove("navbar-colored");
     } else {
         // pas ke posisi semula jadi warna hijau text putih
-        navbar.classList.add('navbar-colored');
-        navbar.classList.remove('navbar-transparent');
+        navbar.classList.add("navbar-colored");
+        navbar.classList.remove("navbar-transparent");
     }
 });
 
 let currentSlide = 0;
 
 function moveSlider(step) {
-    const sliderContainer = document.getElementById('sliderContainer');
-    const slides = document.querySelectorAll('.jurusan-item');
+    const sliderContainer = document.getElementById("sliderContainer");
+    const slides = document.querySelectorAll(".jurusan-item");
     const totalSlides = slides.length;
 
     currentSlide += step;
@@ -43,7 +43,9 @@ function moveSlider(step) {
     }
 
     const slideWidth = slides[0].clientWidth;
-    sliderContainer.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+    sliderContainer.style.transform = `translateX(-${
+        currentSlide * slideWidth
+    }px)`;
 }
 
 function showCertificate(src) {
@@ -58,18 +60,17 @@ function closeOverlay() {
     overlay.style.display = "none";
 }
 
-
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const cards = document.querySelectorAll(".card-prestasi");
 
-    cards.forEach(card => {
-        card.addEventListener("click", function() {
+    cards.forEach((card) => {
+        card.addEventListener("click", function () {
             // Jika sudah aktif, hilangkan class gallery-active
             if (card.classList.contains("gallery-active")) {
                 card.classList.remove("gallery-active");
             } else {
                 // Hapus class gallery-active dari elemen lain
-                cards.forEach(c => c.classList.remove("gallery-active"));
+                cards.forEach((c) => c.classList.remove("gallery-active"));
                 // Tambahkan class gallery-active ke elemen yang diklik
                 card.classList.add("gallery-active");
             }
@@ -77,52 +78,43 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
 (function ($) {
-    'use strict';
+    "use strict";
 
     /*[ File Input Config ]
         ===========================================================*/
-    
+
     try {
-    
-        var file_input_container = $('.js-input-file');
-    
+        var file_input_container = $(".js-input-file");
+
         if (file_input_container[0]) {
-    
             file_input_container.each(function () {
-    
                 var that = $(this);
-    
+
                 var fileInput = that.find(".input-file");
                 var info = that.find(".input-file__info");
-    
+
                 fileInput.on("change", function () {
-    
                     var fileName;
                     fileName = $(this).val();
-    
-                    if (fileName.substring(3,11) == 'fakepath') {
+
+                    if (fileName.substring(3, 11) == "fakepath") {
                         fileName = fileName.substring(12);
                     }
-    
-                    if(fileName == "") {
+
+                    if (fileName == "") {
                         info.text("No file chosen");
                     } else {
                         info.text(fileName);
                     }
-    
-                })
-    
+                });
             });
-    
         }
-    
-    
-    
-    }
-    catch (e) {
+    } catch (e) {
         console.log(e);
     }
-
 })(jQuery);
+
+// Fungsi untuk melakukan animasi increase number
+
+

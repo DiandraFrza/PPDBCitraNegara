@@ -10,6 +10,12 @@
 </head>
 
 <body>
+    <?php if (session()->getFlashdata('success')): ?>
+        <div class="notif-success" id="successNotification">
+            <span><?= session()->getFlashdata('success') ?></span>
+            <button class="close-btn" onclick="closeNotification()">×</button>
+        </div>
+    <?php endif; ?>
     <div class="header-container">
         <div class="logo-container">
             <img class="logocn" alt="Logo Citra Negara" src="<?= base_url('img/logocn2.png') ?>" />
@@ -53,25 +59,29 @@
                 </p>
             </div>
             <div class="home-btn">
-                <button class="button-59 mr-10" role="button">MASUK</button>
+                <button class="button-59 mr-10" role="button" onclick="location.href='<?= site_url('/admin/login') ?>'">MASUK</button>
                 <button class="button-59 mr-10" role="button" onclick="location.href='<?= base_url('/ppdb_siswa/daftar') ?>'">DAFTAR</button>
             </div>
             <div class="stats-container">
                 <div class="stat-item">
                     <img src="<?= base_url('img/gedung.png') ?>" alt="Ruang Kelas">
-                    <p>72 Ruang Kelas</p>
+                    <p class="count" data-target="72">0</p>
+                    <p>Ruang Kelas</p>
                 </div>
                 <div class="stat-item">
                     <img src="<?= base_url('img/siswa.png') ?>" alt="Siswa">
-                    <p>2.890 Murid</p>
+                    <p class="count" data-target="2890">0</p>
+                    <p>Murid</p>
                 </div>
                 <div class="stat-item">
                     <img src="<?= base_url('img/guru.png') ?>" alt="Guru">
-                    <p>100+ Guru</p>
+                    <p class="count" data-target="100">0</p>
+                    <p>Guru</p>
                 </div>
                 <div class="stat-item">
                     <img src="<?= base_url('img/piagam.png') ?>" alt="Prestasi">
-                    <p>1000+ Prestasi</p>
+                    <p class="count" data-target="1000">0</p>
+                    <p>Prestasi</p>
                 </div>
             </div>
         </div>
@@ -394,5 +404,44 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="<?= base_url('js/script.js') ?>"></script>
 <script src="<?= base_url('boostrap/js/boostrap.min.js') ?>"></script>
+<script>
+    function increaseNumberAnimation() {
+        const counters = document.querySelectorAll('.count');
+
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const currentCount = +counter.innerText;
+                const increment = target / 50; // Atur pembagian supaya kecepatannya sesuai
+
+                if (currentCount < target) {
+                    counter.innerText = Math.ceil(currentCount + increment);
+                    setTimeout(updateCount, 50); // Kecepatan animasi, bisa disesuaikan
+                } else {
+                    counter.innerText = target;
+                }
+            };
+
+            updateCount();
+        });
+    }
+
+    // Memulai animasi saat halaman dimuat
+    document.addEventListener("DOMContentLoaded", increaseNumberAnimation);
+
+    // Animasi notifikasi
+    document.addEventListener("DOMContentLoaded", function() {
+        const notif = document.getElementById("successNotification");
+        if (notif) {
+            notif.classList.add("show");
+            setTimeout(() => notif.classList.remove("show"), 30000); // Auto-hide setelah 30 detik
+        }
+    });
+
+    // Tutup notifikasi manual
+    function closeNotification() {
+        document.getElementById("successNotification").style.display = "none";
+    }
+</script>
 
 </html>

@@ -19,7 +19,7 @@
         <?php foreach ($siswa as $s): ?>
             <tr>
                 <td><?= $s['nama_lengkap'] ?></td>
-                <td><?= $s['tempat_lahir'] ?></td>
+                <td><?= $s['jenis_kelamin'] ?></td>
                 <td><?= $s['tanggal_lahir'] ?></td>
                 <td><?= $s['alamat'] ?></td>
                 <td><?= $s['telepon'] ?></td>

@@ -10,12 +10,12 @@ class PpdbSiswaModel extends Model
     protected $primaryKey = 'id_siswa';
     protected $allowedFields = [
         'nama_lengkap',
-        'tempat_lahir',
+        'jenis_kelamin',
         'tanggal_lahir',
         'alamat',
         'telepon',
         'email',
-        'pilihan_jurusan',
+        'pilihan_jurusan',  // Pastikan ini ada
         'nilai_ijazah',
         'foto_siswa',
         'dokumen_pendukung'
