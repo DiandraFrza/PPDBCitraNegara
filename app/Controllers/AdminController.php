@@ -28,22 +28,11 @@ class AdminController extends BaseController
 
     public function attemptLogin()
     {
-        $username = $this->request->getPost('username');
-        $password = $this->request->getPost('password');
-
-        $admin = $this->adminModel->getAdminByEmail($username);
-
-        // Cek apakah admin ditemukan dan password valid
-        if ($admin && password_verify($password, $admin['password'])) {
-            // Set session data
-            session()->set('admin_id', $admin['id']);
-            session()->set('admin_name', $admin['nama']);
-
-            return redirect()->to('/admin/dashboard')->with('success', 'Selamat datang, ' . $admin['nama']);
-        } else {
-            // Jika login gagal
-            return redirect()->back()->with('error', 'Username atau password salah.')->withInput();
-        }
+        $data = [
+            'title' => 'Login SMK Citra Negara',
+            'currentPage' => 'dashboard'
+        ];
+        return view('admin/dashboard', $data);
     }
 
     // public function dashboard()
@@ -57,10 +46,7 @@ class AdminController extends BaseController
 
     public function dashboard()
     {
-        // Cek jika user belum login
-        if (!$this->session->get('logged_in')) {
-            return redirect()->to('/admin/login');
-        }
+        session()->set('logged_in', true);
 
         $data = [
             'title' => 'Dashboard Admin',

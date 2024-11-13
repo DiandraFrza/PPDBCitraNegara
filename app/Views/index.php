@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title ?></title>
     <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('css/custom.css') ?>">
     <link rel="stylesheet" href="<?= base_url('boostrap/css/boostrap.min.css') ?>">
 </head>
 
@@ -393,7 +394,28 @@
         <button id="close-btn" onclick="closeOverlay()">X</button>
     </div>
 
-    <iframe class="pt-5" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15860.419338529648!2d106.8096617!3d-6.3804675!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eeacc6e549ab%3A0xd6c5c8ece644d8ee!2sSekolah%20Menengah%20Kejuruan%20Citra%20Negara!5e0!3m2!1sid!2sid!4v1728786042559!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <section id="contact">
+        <h2 class="text-center fs-2 prestasi-text">Contact</h2><br><br>
+        <div class="feedback-card">
+            <div class="feedback-header">
+                SEND FEEDBACK
+            </div>
+            <form class="feedback-body">
+                <input type="email" class="feedback-body__email" placeholder="Email" />
+                <textarea type="text" class="feedback-body__message" placeholder="Message"></textarea>
+                <!-- Tombol untuk membuka map -->
+                <button class="feedback-body__submit">SEND</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="map-container" id="mapContainer" onclick="toggleFullscreen()">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15860.419338529648!2d106.8096617!3d-6.3804675!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eeacc6e549ab%3A0xd6c5c8ece644d8ee!2sSekolah%20Menengah%20Kejuruan%20Citra%20Negara!5e0!3m2!1sid!2sid!4v1728786042559!5m2!1sid!2sid"
+            loading="lazy">
+        </iframe>
+    </div>
+
 </body>
 <footer class="py-5 footer-wrapper">
     <div class="container">
@@ -405,6 +427,11 @@
 <script src="<?= base_url('js/script.js') ?>"></script>
 <script src="<?= base_url('boostrap/js/boostrap.min.js') ?>"></script>
 <script>
+    function toggleFullscreen() {
+        const mapContainer = document.getElementById('mapContainer');
+        mapContainer.classList.toggle('fullscreen');
+    }
+
     function increaseNumberAnimation() {
         const counters = document.querySelectorAll('.count');
 

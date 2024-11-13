@@ -8,10 +8,14 @@
 
     <hr class="sidebar-divider my-0">
 
-    <li class="mt-2 nav-item <?= ($currentPage == 'dashboard') ? 'active' : '' ?>">
-        <a class="nav-link load-content" href="<?= base_url('admin/dashboard') ?>" data-url="<?= base_url('admin/dashboard') ?>">
+    <div class="mt-2 sidebar-heading">
+        CORE
+    </div>
+
+    <li class="mt-2 nav-item <?= ($currentPage == '/') ? 'active' : '' ?>">
+        <a class="nav-link load-content" href="<?= base_url('/') ?>" data-url="<?= base_url('/') ?>">
             <i class="fa-solid fa-user-graduate"></i>
-            <span>Data Pendaftaran</span>
+            <span>Dashboard</span>
         </a>
     </li>
 
@@ -20,6 +24,13 @@
     </div>
 
     <hr class="mb-2 sidebar-divider">
+
+    <li class="mt-2 nav-item <?= ($currentPage == 'dashboard') ? 'active' : '' ?>">
+        <a class="nav-link load-content" href="<?= base_url('admin/dashboard') ?>" data-url="<?= base_url('admin/dashboard') ?>">
+            <i class="fa-solid fa-user-graduate"></i>
+            <span>Data Pendaftaran</span>
+        </a>
+    </li>
 
     <li class="nav-item <?= ($currentPage == 'list_admin') ? 'active' : '' ?>">
         <a class="nav-link load-content" href="<?= base_url('admin/index') ?>" data-url="<?= base_url('admin/index') ?>">
