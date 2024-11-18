@@ -97,6 +97,99 @@ class AdminController extends BaseController
             'role' => $this->request->getPost('role'),
         ]);
 
-        return redirect()->to('/admin')->with('success', 'Admin berhasil ditambahkan');
+        return redirect()->to('/admin/dashboard')->with('success', 'Admin berhasil ditambahkan');
+    }
+
+    public function tambahSiswa()
+    {
+        $data = [
+            'title' => 'Tambah Data Siswa',
+            'currentPage' => 'data_pndftaran'
+        ];
+
+        return view('admin/tambah_siswa', $data); // Pastikan view-nya sesuai
+    }
+
+    public function simpanSiswa()
+    {
+        // Validasi input
+        if (!$this->validate([
+            'nama_lengkap' => 'required',
+            'jenis_kelamin' => 'required',
+            'tanggal_lahir' => 'required|valid_date',
+            'alamat' => 'required',
+            'telepon' => 'required|numeric',
+            'email' => 'required|valid_email',
+            'pilihan_jurusan' => 'required',
+            'nilai_ijazah' => 'required|numeric',
+        ])) {
+            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        }
+
+        $this->ppdbSiswaModel->save([
+            'nama_lengkap' => $this->request->getPost('nama_lengkap'),
+            'jenis_kelamin' => $this->request->getPost('jenis_kelamin'),
+            'tanggal_lahir' => $this->request->getPost('tanggal_lahir'),
+            'alamat' => $this->request->getPost('alamat'),
+            'telepon' => $this->request->getPost('telepon'),
+            'email' => $this->request->getPost('email'),
+            'pilihan_jurusan' => $this->request->getPost('pilihan_jurusan'),
+            'nilai_ijazah' => $this->request->getPost('nilai_ijazah'),
+        ]);
+
+        return redirect()->to('/admin/data_pndftaran')->with('success', 'Data siswa berhasil ditambahkan.');
+    }
+
+    public function editSiswa($id)
+    {
+        $siswa = $this->ppdbSiswaModel->find($id);
+
+        if (!$siswa) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException("Data siswa dengan ID $id tidak ditemukan.");
+        }
+
+        $data = [
+            'title' => 'Edit Data Siswa',
+            'currentPage' => 'data_pndftaran',
+            'siswa' => $siswa
+        ];
+
+        return view('admin/edit_siswa', $data);
+    }
+
+    public function updateSiswa($id)
+    {
+        // Validasi input
+        if (!$this->validate([
+            'nama_lengkap' => 'required',
+            'jenis_kelamin' => 'required',
+            'tanggal_lahir' => 'required|valid_date',
+            'alamat' => 'required',
+            'telepon' => 'required|numeric',
+            'email' => 'required|valid_email',
+            'pilihan_jurusan' => 'required',
+            'nilai_ijazah' => 'required|numeric',
+        ])) {
+            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        }
+
+        $this->ppdbSiswaModel->update($id, [
+            'nama_lengkap' => $this->request->getPost('nama_lengkap'),
+            'jenis_kelamin' => $this->request->getPost('jenis_kelamin'),
+            'tanggal_lahir' => $this->request->getPost('tanggal_lahir'),
+            'alamat' => $this->request->getPost('alamat'),
+            'telepon' => $this->request->getPost('telepon'),
+            'email' => $this->request->getPost('email'),
+            'pilihan_jurusan' => $this->request->getPost('pilihan_jurusan'),
+            'nilai_ijazah' => $this->request->getPost('nilai_ijazah'),
+        ]);
+
+        return redirect()->to('/admin/data_pndftaran')->with('success', 'Data siswa berhasil diperbarui.');
+    }
+
+    public function hapusSiswa($id)
+    {
+        $this->ppdbSiswaModel->delete($id);
+        return redirect()->to('/admin/data_pndftaran')->with('success', 'Data siswa berhasil dihapus.');
     }
 }
