@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Controllers\Admin;
 
 use App\Models\AdminModel;
 use App\Models\PpdbSiswaModel;
+use App\Controllers\BaseController;
 
 class AdminController extends BaseController
 {
@@ -56,7 +57,19 @@ class AdminController extends BaseController
         return view('admin/dashboard', $data);
     }
 
-    public function index()
+    public function data_pndftaran()
+    {
+        session()->set('logged_in', true);
+
+        $data = [
+            'title' => 'Data PPDB',
+            'currentPage' => 'data_pndftaran',
+            'siswa' => $this->ppdbSiswaModel->findAll()
+        ];
+        return view('admin/data_pndftaran', $data);
+    }
+
+    public function list_admin()
     {
         $data = [
             'title' => 'List Admin',
@@ -64,9 +77,10 @@ class AdminController extends BaseController
             'admins' => $this->adminModel->findAll()
         ];
 
-        return view('admin/index', $data);
+        return view('admin/list_admin', $data);
     }
 
+    // CRUD
     public function create()
     {
         $data = ['title' => 'Tambah Admin'];

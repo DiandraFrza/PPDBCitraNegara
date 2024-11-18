@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Controllers\ppdb;
 
 use App\Models\PpdbSiswaModel;
 use CodeIgniter\Controller;
@@ -60,7 +60,7 @@ class PpdbSiswaController extends Controller
             return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
         }
 
-        // Upload foto siswa dan dokumen pendukung secara aman
+        // Upload foto siswa & dokumen pendukung
         $fotoSiswa = $this->request->getFile('foto_siswa');
         $dokumenPendukung = $this->request->getFile('dokumen_pendukung');
 
@@ -73,6 +73,7 @@ class PpdbSiswaController extends Controller
         //     $tanggalParts = explode('/', $tanggalLahir);
         //     $tanggalLahir = $tanggalParts[2] . '-' . $tanggalParts[1] . '-' . $tanggalParts[0];
         // }
+
         // Simpan data siswa ke database
         $this->ppdbSiswaModel->insert([
             'nama_lengkap' => esc($this->request->getPost('nama_lengkap')),
@@ -102,7 +103,7 @@ class PpdbSiswaController extends Controller
                             <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm(\'Yakin ingin menghapus data ini?\');">Delete</button>
                         </form>';
             })
-            ->hide('id_siswa') // Sembunyikan kolom id_siswa jika tidak perlu ditampilkan
+            ->hide('id_siswa') // hide id siswa
             ->toJson();
     }
 

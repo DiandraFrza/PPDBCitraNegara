@@ -9,6 +9,6 @@ class Home extends BaseController
         $data = [
             'title' => 'PPDBP Citra Negara'
         ];
-        return view('index.php', $data);
+        return view('user/dashboard', $data);
     }
 }

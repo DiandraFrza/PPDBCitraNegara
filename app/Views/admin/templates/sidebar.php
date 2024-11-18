@@ -12,8 +12,8 @@
         CORE
     </div>
 
-    <li class="mt-2 nav-item <?= ($currentPage == '/') ? 'active' : '' ?>">
-        <a class="nav-link load-content" href="<?= base_url('/') ?>" data-url="<?= base_url('/') ?>">
+    <li class="mt-2 nav-item <?= ($currentPage == 'dashboard') ? 'active' : '' ?>">
+        <a class="nav-link load-content" href="<?= base_url('admin/dashboard') ?>" data-url="<?= base_url('admin/dashboard') ?>">
             <i class="fa-solid fa-user-graduate"></i>
             <span>Dashboard</span>
         </a>
@@ -25,24 +25,19 @@
 
     <hr class="mb-2 sidebar-divider">
 
-    <li class="mt-2 nav-item <?= ($currentPage == 'dashboard') ? 'active' : '' ?>">
-        <a class="nav-link load-content" href="<?= base_url('admin/dashboard') ?>" data-url="<?= base_url('admin/dashboard') ?>">
+    <li class="mt-2 nav-item <?= ($currentPage == 'data_pndftaran') ? 'active' : '' ?>">
+        <a class="nav-link load-content" href="<?= base_url('admin/data_pndftaran') ?>" data-url="<?= base_url('admin/data_pndftaran') ?>">
             <i class="fa-solid fa-user-graduate"></i>
             <span>Data Pendaftaran</span>
         </a>
     </li>
 
     <li class="nav-item <?= ($currentPage == 'list_admin') ? 'active' : '' ?>">
-        <a class="nav-link load-content" href="<?= base_url('admin/index') ?>" data-url="<?= base_url('admin/index') ?>">
+        <a class="nav-link load-content" href="<?= base_url('admin/list_admin') ?>" data-url="<?= base_url('admin/list_admin') ?>">
             <i class="fas fa-fw fa-users-gear"></i>
             <span>List Admin</span>
         </a>
 
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">
-            <span>Test Sidebar Item</span>
-        </a>
     </li>
     <?php
     echo "<script>console.log('Sidebar loaded');</script>";

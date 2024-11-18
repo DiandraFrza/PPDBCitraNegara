@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><?= $title ?></title>
-    <link href="<?= base_url('css/sb-admin-2.css') ?>" rel="stylesheet">
-    <link rel="stylesheet" href="<?= base_url('css/custom-sidebar.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets-admin/css/sb-admin-2.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets-admin/css/custom-sidebar.css'); ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap4.min.css">
@@ -16,7 +16,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <?= $this->include('templates/sidebar'); ?>
+        <?= $this->include('admin/templates/sidebar'); ?>
         <!-- End Sidebar -->
 
         <div id="content-wrapper" class="d-flex flex-column">
@@ -48,7 +48,7 @@
         </div>
         <script src="<?= base_url('vendor/jquery/jquery.min.js') ?>"></script>
         <script src="<?= base_url('vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
-        <script src="<?= base_url('js/sb-admin-2.min.js') ?>"></script>
+        <script src="<?= base_url('assets-admin/js/sb-admin-2.min.js') ?>"></script>
         <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap4.min.js"></script>
 

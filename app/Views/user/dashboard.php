@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title ?></title>
-    <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('css/custom.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets-user/css/style.css') ?>">
     <link rel="stylesheet" href="<?= base_url('boostrap/css/boostrap.min.css') ?>">
 </head>
 
@@ -19,16 +18,16 @@
     <?php endif; ?>
     <div class="header-container">
         <div class="logo-container">
-            <img class="logocn" alt="Logo Citra Negara" src="<?= base_url('img/logocn2.png') ?>" />
+            <img class="logocn" alt="Logo Citra Negara" src="<?= base_url('assets-user/img/logocn2.png') ?>" />
             <span class="text-container">
                 SEKOLAH MENENGAH KEJURUAN CITRA NEGARA
             </span>
         </div>
         <div class="logos-container">
-            <img alt="Logo SMK HEBAT" src="<?= base_url('img/smkhebat.png') ?>" />
-            <img alt="Logo TEKNISI GO" src="<?= base_url('img/teknisigo.png') ?>" />
-            <img alt="Logo MASAGI" src="<?= base_url('img/masagi.png') ?>" />
-            <img alt="Logo ADIWIYATA" src="<?= base_url('img/adiwiyata.png') ?>" />
+            <img alt="Logo SMK HEBAT" src="<?= base_url('assets-user/img/smkhebat.png') ?>" />
+            <img alt="Logo TEKNISI GO" src="<?= base_url('assets-user/img/teknisigo.png') ?>" />
+            <img alt="Logo MASAGI" src="<?= base_url('assets-user/img/masagi.png') ?>" />
+            <img alt="Logo ADIWIYATA" src="<?= base_url('assets-user/img/adiwiyata.png') ?>" />
         </div>
     </div>
     <div class="navbar-container navbar-colored">
@@ -65,22 +64,22 @@
             </div>
             <div class="stats-container">
                 <div class="stat-item">
-                    <img src="<?= base_url('img/gedung.png') ?>" alt="Ruang Kelas">
+                    <img src="<?= base_url('assets-user/img/gedung.png') ?>" alt="Ruang Kelas">
                     <p class="count" data-target="72">0</p>
                     <p>Ruang Kelas</p>
                 </div>
                 <div class="stat-item">
-                    <img src="<?= base_url('img/siswa.png') ?>" alt="Siswa">
+                    <img src="<?= base_url('assets-user/img/siswa.png') ?>" alt="Siswa">
                     <p class="count" data-target="2890">0</p>
                     <p>Murid</p>
                 </div>
                 <div class="stat-item">
-                    <img src="<?= base_url('img/guru.png') ?>" alt="Guru">
+                    <img src="<?= base_url('assets-user/img/guru.png') ?>" alt="Guru">
                     <p class="count" data-target="100">0</p>
                     <p>Guru</p>
                 </div>
                 <div class="stat-item">
-                    <img src="<?= base_url('img/piagam.png') ?>" alt="Prestasi">
+                    <img src="<?= base_url('assets-user/img/piagam.png') ?>" alt="Prestasi">
                     <p class="count" data-target="1000">0</p>
                     <p>Prestasi</p>
                 </div>
@@ -94,23 +93,23 @@
             <button class="prev" onclick="moveSlider(-1)">&#10094;</button>
             <div class="jurusan-wrapper" id="sliderContainer">
                 <div class="jurusan-item">
-                    <img src="<?= base_url('img/jurusan/PPLG.png') ?>" alt="PPLG">
+                    <img src="<?= base_url('assets-user/img/jurusan/PPLG.png') ?>" alt="PPLG">
                     <p>PPLG (Pengembangan Perangkat Lunak dan Gim)</p>
                 </div>
                 <div class="jurusan-item">
-                    <img src="<?= base_url('img/jurusan/TKJT.png') ?>" alt="TKJT">
+                    <img src="<?= base_url('assets-user/img/jurusan/TKJT.png') ?>" alt="TKJT">
                     <p>TKJT (Teknik Jaringan Komputer dan Telekomunikasi)</p>
                 </div>
                 <div class="jurusan-item">
-                    <img src="<?= base_url('img/jurusan/PEMASARAN.png') ?>" alt="Pemasaran">
+                    <img src="<?= base_url('assets-user/img/jurusan/PEMASARAN.png') ?>" alt="Pemasaran">
                     <p>Pemasaran</p>
                 </div>
                 <div class="jurusan-item">
-                    <img src="<?= base_url('img/jurusan/DKV.png') ?>" alt="DKV">
+                    <img src="<?= base_url('assets-user/img/jurusan/DKV.png') ?>" alt="DKV">
                     <p>DKV (Desain Komunikasi Visual)</p>
                 </div>
                 <div class="jurusan-item">
-                    <img src="<?= base_url('img/jurusan/MPLB.png') ?>" alt="MPLB">
+                    <img src="<?= base_url('assets-user/img/jurusan/MPLB.png') ?>" alt="MPLB">
                     <p>MPLB (Manajemen Perkantoran dan Layanan Bisnis)</p>
                 </div>
             </div>
@@ -123,19 +122,19 @@
         <div class="sertifikat-container">
             <div class="sertifikat-wrapper">
                 <div class="certificate">
-                    <img src="<?= base_url('img/sertifikat/certif1.png'); ?>" alt="Akreditasi Sertifikat" onclick="showCertificate('<?= base_url('img/sertifikat/certif1.png'); ?>')">
+                    <img src="<?= base_url('assets-user/img/sertifikat/certif1.png'); ?>" alt="Akreditasi Sertifikat" onclick="showCertificate('<?= base_url('assets-user/img/sertifikat/certif1.png'); ?>')">
                     <div class="sertifikat-caption">Akreditasi Sertifikat</div>
                 </div>
                 <div class="certificate">
-                    <img src="<?= base_url('img/sertifikat/certif2.png'); ?>" alt="Sekolah Adiwiyata" onclick="showCertificate('<?= base_url('img/sertifikat/certif2.png'); ?>')">
+                    <img src="<?= base_url('assets-user/img/sertifikat/certif2.png'); ?>" alt="Sekolah Adiwiyata" onclick="showCertificate('<?= base_url('assets-user/img/sertifikat/certif2.png'); ?>')">
                     <div class="sertifikat-caption">Sekolah Masagi</div>
                 </div>
                 <div class="certificate">
-                    <img src="<?= base_url('img/sertifikat/certif3.png'); ?>" alt="Lomba Gala Kreasi" onclick="showCertificate('<?= base_url('img/sertifikat/certif3.png'); ?>')">
+                    <img src="<?= base_url('assets-user/img/sertifikat/certif3.png'); ?>" alt="Lomba Gala Kreasi" onclick="showCertificate('<?= base_url('assets-user/img/sertifikat/certif3.png'); ?>')">
                     <div class="sertifikat-caption">Lomba Gala Kreasi</div>
                 </div>
                 <div class="certificate">
-                    <img src="<?= base_url('img/sertifikat/certif4.png'); ?>" alt="Sekolah Masagi" onclick="showCertificate('<?= base_url('img/sertifikat/certif4.png'); ?>')">
+                    <img src="<?= base_url('assets-user/img/sertifikat/certif4.png'); ?>" alt="Sekolah Masagi" onclick="showCertificate('<?= base_url('assets-user/img/sertifikat/certif4.png'); ?>')">
                     <div class="sertifikat-caption">Sekolah Adiwiyata</div>
                 </div>
             </div>
@@ -157,7 +156,7 @@
                     <div class="card h-100">
                         <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">HOTS</div>
                         <!-- Product image-->
-                        <img class="card-img-top" src="<?= base_url('img/eskul/IMG-20241031-WA0000.jpg'); ?>" alt="..." />
+                        <img class="card-img-top" src="<?= base_url('assets-user/img/eskul/IMG-20241031-WA0000.jpg'); ?>" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
@@ -176,7 +175,7 @@
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Product image-->
-                        <img class="card-img-top" src="<?= base_url('img/eskul/IMG-20241031-WA0001.jpg'); ?>" alt="Akreditasi Sertifikat" />
+                        <img class="card-img-top" src="<?= base_url('assets-user/img/eskul/IMG-20241031-WA0001.jpg'); ?>" alt="Akreditasi Sertifikat" />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
@@ -195,7 +194,7 @@
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Product image-->
-                        <img class="card-img-top" src="<?= base_url('img/eskul/IMG-20241031-WA0002.jpg'); ?>" alt="Akreditasi Sertifikat" />
+                        <img class="card-img-top" src="<?= base_url('assets-user/img/eskul/IMG-20241031-WA0002.jpg'); ?>" alt="Akreditasi Sertifikat" />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
@@ -214,7 +213,7 @@
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Product image-->
-                        <img class="card-img-top" src="<?= base_url('img/eskul/IMG-20241031-WA0003.jpg'); ?>" alt="Akreditasi Sertifikat" />
+                        <img class="card-img-top" src="<?= base_url('assets-user/img/eskul/IMG-20241031-WA0003.jpg'); ?>" alt="Akreditasi Sertifikat" />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
@@ -233,7 +232,7 @@
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Product image-->
-                        <img class="card-img-top" src="<?= base_url('img/eskul/IMG-20241031-WA0004.jpg'); ?>" alt="Akreditasi Sertifikat" />
+                        <img class="card-img-top" src="<?= base_url('assets-user/img/eskul/IMG-20241031-WA0004.jpg'); ?>" alt="Akreditasi Sertifikat" />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
@@ -252,7 +251,7 @@
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Product image-->
-                        <img class="card-img-top" src="<?= base_url('img/eskul/IMG-20241031-WA0005.jpg'); ?>" alt="Akreditasi Sertifikat" />
+                        <img class="card-img-top" src="<?= base_url('assets-user/img/eskul/IMG-20241031-WA0005.jpg'); ?>" alt="Akreditasi Sertifikat" />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
@@ -271,7 +270,7 @@
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Product image-->
-                        <img class="card-img-top" src="<?= base_url('img/eskul/IMG-20241031-WA0006.jpg'); ?>" alt="Akreditasi Sertifikat" />
+                        <img class="card-img-top" src="<?= base_url('assets-user/img/eskul/IMG-20241031-WA0006.jpg'); ?>" alt="Akreditasi Sertifikat" />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
@@ -290,7 +289,7 @@
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Product image-->
-                        <img class="card-img-top" src="<?= base_url('img/eskul/IMG-20241031-WA0007.jpg'); ?>" alt="Akreditasi Sertifikat" />
+                        <img class="card-img-top" src="<?= base_url('assets-user/img/eskul/IMG-20241031-WA0007.jpg'); ?>" alt="Akreditasi Sertifikat" />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
@@ -309,7 +308,7 @@
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Product image-->
-                        <img class="card-img-top" src="<?= base_url('img/eskul/IMG-20241031-WA0008.jpg'); ?>" alt="Akreditasi Sertifikat" />
+                        <img class="card-img-top" src="<?= base_url('assets-user/img/eskul/IMG-20241031-WA0008.jpg'); ?>" alt="Akreditasi Sertifikat" />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
@@ -328,7 +327,7 @@
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Product image-->
-                        <img class="card-img-top" src="<?= base_url('img/eskul/IMG-20241031-WA0009.jpg'); ?>" alt="Akreditasi Sertifikat" />
+                        <img class="card-img-top" src="<?= base_url('assets-user/img/eskul/IMG-20241031-WA0009.jpg'); ?>" alt="Akreditasi Sertifikat" />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
@@ -353,37 +352,37 @@
         <div class="prestasi-wrapper">
             <div class="gallery">
                 <figure class="card-prestasi">
-                    <img src="<?= base_url('img/prestasi/band.jpg'); ?>" alt="JUARA BAND">
+                    <img src="<?= base_url('assets-user/img/prestasi/band.jpg'); ?>" alt="JUARA BAND">
                 </figure>
                 <figure class="card-prestasi">
-                    <img src="<?= base_url('img/prestasi/dancer.jpg'); ?>" alt="JUARA DANCE">
+                    <img src="<?= base_url('assets-user/img/prestasi/dancer.jpg'); ?>" alt="JUARA DANCE">
                 </figure>
                 <figure class="card-prestasi">
-                    <img src="<?= base_url('img/prestasi/ff.jpg'); ?>" alt="JUARA FREEFIRE">
+                    <img src="<?= base_url('assets-user/img/prestasi/ff.jpg'); ?>" alt="JUARA FREEFIRE">
                 </figure>
                 <figure class="card-prestasi">
-                    <img src="<?= base_url('img/prestasi/futsal.jpg'); ?>" alt="JUARA FUTSAL">
+                    <img src="<?= base_url('assets-user/img/prestasi/futsal.jpg'); ?>" alt="JUARA FUTSAL">
                 </figure>
                 <figure class="card-prestasi">
-                    <img src="<?= base_url('img/prestasi/futsal1.jpg'); ?>" alt="JUARA FUTSAL">
+                    <img src="<?= base_url('assets-user/img/prestasi/futsal1.jpg'); ?>" alt="JUARA FUTSAL">
                 </figure>
                 <figure class="card-prestasi">
-                    <img src="<?= base_url('img/prestasi/guitar.jpg'); ?>" alt="JUARA GITAR">
+                    <img src="<?= base_url('assets-user/img/prestasi/guitar.jpg'); ?>" alt="JUARA GITAR">
                 </figure>
                 <figure class="card-prestasi">
-                    <img src="<?= base_url('img/prestasi/paskibra.jpg'); ?>" alt="JUARA PASKIBRA">
+                    <img src="<?= base_url('assets-user/img/prestasi/paskibra.jpg'); ?>" alt="JUARA PASKIBRA">
                 </figure>
                 <figure class="card-prestasi">
-                    <img src="<?= base_url('img/prestasi/puisi.jpg'); ?>" alt="JUARA PUISI">
+                    <img src="<?= base_url('assets-user/img/prestasi/puisi.jpg'); ?>" alt="JUARA PUISI">
                 </figure>
                 <figure class="card-prestasi">
-                    <img src="<?= base_url('img/prestasi/taekwondo.jpg'); ?>" alt="JUARA TAEKWONDO">
+                    <img src="<?= base_url('assets-user/img/prestasi/taekwondo.jpg'); ?>" alt="JUARA TAEKWONDO">
                 </figure>
                 <figure class="card-prestasi">
-                    <img src="<?= base_url('img/prestasi/taekwondo1.jpg'); ?>" alt="JUARA TAEKWONDO">
+                    <img src="<?= base_url('assets-user/img/prestasi/taekwondo1.jpg'); ?>" alt="JUARA TAEKWONDO">
                 </figure>
                 <figure class="card-prestasi">
-                    <img src="<?= base_url('img/prestasi/volly.jpg'); ?>" alt="JUARA VOLLY">
+                    <img src="<?= base_url('assets-user/img/prestasi/volly.jpg'); ?>" alt="JUARA VOLLY">
                 </figure>
             </div>
         </div>
@@ -424,7 +423,7 @@
 </footer>
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="<?= base_url('js/script.js') ?>"></script>
+<script src="<?= base_url('assets-user/js/script.js') ?>"></script>
 <script src="<?= base_url('boostrap/js/boostrap.min.js') ?>"></script>
 <script>
     function toggleFullscreen() {

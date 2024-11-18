@@ -1,15 +1,14 @@
-
 .sidebar .nav-item .nav-link {
-    padding: 10px 15px;
+    padding-left: 10px;
     border-radius: 10px;
-    margin: 5px 15px; /* Memberi jeda kanan dan kiri */
+    margin: 5px 3px; /* Memberi jeda kanan dan kiri */
     transition: all 0.3s ease;
 }
 
 .sidebar .nav-item .nav-link:hover {
     background-color: #F8F9FC;
     color: #000;
-    padding: 10px 5px;
+    padding-left: 10px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -20,7 +19,7 @@
 .sidebar .nav-item.active .nav-link {
     background-color: #F8F9FC;
     color: #000;
-    padding: 10px 5px;
+    padding-left: 10px;
     border-radius: 0.3rem;
     transition: all 0.3s ease-out;
     -webkit-transition: all 0.3s ease-out;
