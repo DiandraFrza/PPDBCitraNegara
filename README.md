@@ -4,6 +4,11 @@
 
 **PPDB Website** ini adalah sebuah platform pendaftaran siswa baru berbasis web yang dirancang untuk SMK Citra Negara. Dibuat menggunakan **CodeIgniter 4**, proyek ini menampilkan desain responsif, aesthetic, family friendly, fitur informatif, dan pengalaman pengguna yang intuitif.
 
+## TIM:
+- **FIGMA         = RODIN, CALISTA**
+- **WRITE FRAME   = RASYID**
+- **SLASHING      = RIVALDO, MAGFI**
+- **PRESENTASI    = AMAR, RUBEN**
 ---
 
 ## ✨ Fitur Utama
